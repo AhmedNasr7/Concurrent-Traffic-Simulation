@@ -26,9 +26,10 @@ public:
 	void send(T &&msg);
     T receive();
     
-    std::deque<T> _queue;
 
 private:
+
+	 std::deque<T> _queue;
 	 std::condition_variable _cVariable;
      std::mutex _mutex;
     
